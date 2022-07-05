@@ -1,4 +1,15 @@
+/* font */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* font awesome */
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24;
+}
 
 /* COMMON */
 body {
@@ -14,6 +25,7 @@ a {
 header {
     background-color: #ded5fe;
 }
+
 header:hover {
     background-color: white;
 }
@@ -59,11 +71,25 @@ header .inner .header__menu li {
 
 header .inner .header__menu li a {
     color: black;
+    top: 0;
+    bottom: 0;
+    height: 10px;
+    margin: auto;
+}
+
+header .inner .header__menu li a span {
+    font-size: 12px;
 }
 
 header .inner .header__menu li:hover {
     background-color: #eaecef;
     border-radius: 4px;
+}
+
+/* 서비스, 엘리스 ^ 호버 효과 */
+header .inner .header__menu li:hover a>span {
+    transition: 0.5s;
+    transform: rotate(180deg);
 }
 
 /* HEADER BTN */
@@ -89,9 +115,22 @@ header .inner .header__btn .header__btn__login:hover {
 
 header .inner .header__btn .header__btn__inquiry {
     padding: 8px 16px;
-    background-color:#353a3f;
+    background-color: #353a3f;
     border-radius: 4px;
     color: white;
     cursor: pointer;
 }
 
+/* 드롭다운 */
+header .inner .header__menu .sub__menu {
+    display: none;
+}
+
+header .inner .header__menu .sub__menu li a {
+    display: block;
+    line-height: 72px;
+}
+
+header .inner .header__menu li:hover .sub__menu {
+    display: block;
+}
