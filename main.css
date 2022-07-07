@@ -1,143 +1,169 @@
-/* font */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-/* font awesome */
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 300,
-        'GRAD' 0,
-        'opsz' 24;
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
-/* COMMON */
 body {
-    background-color: #ded5fe;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background-color: #DED5FE;
+    color: #4a5056;
+    height: 3000px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 a {
     text-decoration: none;
 }
 
-/* HEADER */
-header {
-    background-color: #ded5fe;
+.inner {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+
 }
 
+.fa-solid.fa-arrow-right {
+    opacity: 0;
+    font-size: 12px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #DED5FE;
+}
 header:hover {
     background-color: white;
 }
-
-header .inner {
-    position: relative;
-    width: 1200px;
+header>.inner {
     height: 72px;
-    padding: 0 24px;
-    margin: 0 auto;
-    display: flex;
 }
 
-/* HEADER LOGO */
-header .inner .header__logo {
+/* LOGO */
+header .inner .logo {
     position: absolute;
     top: 0;
     bottom: 0;
+    height: 40px;
     margin: auto;
-    height: 36px;
 }
 
-header .inner .header__logo img {
-    width: 105px;
-    height: 32px;
-}
-
-/* HEADER MENU */
-header .inner .header__menu {
-    display: flex;
+/* MAIN MENU */
+header .inner .main_menu {
     position: absolute;
-    left: 150px;
-    margin: auto;
+    display: flex;
+    left: 120px;
     top: 0;
     bottom: 0;
     height: 32px;
+    margin: auto;
 }
 
-header .inner .header__menu li {
+header .inner .main_menu .menu {
+    display: flex;
+}
+
+header .inner .main_menu .menu .menu__name {
+    font-size: 16px;
     margin-left: 24px;
-    padding: 8px 10px;
+    padding: 8px 11px;
 }
 
-header .inner .header__menu li a {
-    color: black;
-    top: 0;
-    bottom: 0;
-    height: 10px;
-    margin: auto;
-}
-
-header .inner .header__menu li a>span {
-    font-size: 12px;
-    transition: 0.5s;
-}
-
-header .inner .header__menu li:hover {
-    background-color: #eaecef;
+header .inner .main_menu .menu:hover .menu__name {
+    background-color: #EAECEF;
     border-radius: 4px;
 }
 
-/* 서비스, 엘리스 ^ 호버 효과 */
-header .inner .header__menu li:hover a>span {
+header .inner .main_menu .menu .menu__name>i {
+    margin-left: 8px;
+    transition: 0.4s;
+    font-size: 12px;
+}
+
+header .inner .main_menu .menu .menu__name:hover>i {
     transform: rotate(180deg);
+}
+
+/* DROP DOWN */
+header .inner .main_menu .menu .menu__contents {
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 72px;
+}
+
+header .inner .main_menu .menu:hover .menu__contents {
+    display: block;
+    top: 53px;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name {
+    background-color: white;
+    width: 100%;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner {
+    display: flex;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner .title_text {
+    display: block;
+    margin: 30px 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner li ul li {
+    width: 315px;
+    margin: 0 50px 20px 50px;
+    font-size: 13px;
+    padding: 20px 0;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner li ul li:hover {
+    cursor: pointer;
+    background-color: #f8f9f8;
+    border-radius: 4px;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner li ul li:hover>i {
+    opacity: 1;
+}
+
+header .inner .main_menu .menu .menu__contents .menu__contents__name .inner li ul img {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 13px 0 0 0;   
 }
 
 /* HEADER BTN */
 header .inner .header__btn {
     position: absolute;
-    right: 0;
     display: flex;
-    height: 32px;
+    right: 0;
+    height: 46px;
     top: 0;
     bottom: 0;
     margin: auto;
 }
 
-header .inner .header__btn .header__btn__login {
-    padding: 8px;
+header .inner .header__btn .btn__login {
+    padding: 16px;
     margin-right: 8px;
     cursor: pointer;
 }
 
-header .inner .header__btn .header__btn__login:hover {
-    text-decoration: underline;
-}
-
-header .inner .header__btn .header__btn__inquiry {
-    padding: 8px 16px;
+header .inner .header__btn .btn__inquiry {
+    padding: 16px;
     background-color: #353a3f;
     border-radius: 4px;
-    color: white;
+    color: #ececef;
     cursor: pointer;
-}
-
-/* 드롭다운 */
-header .inner .header__menu .sub__menu {
-    display: none;
-    position: fixed;
-}
-
-header .inner .header__menu .sub__menu li>a {
-    display: block;
-    line-height: 72px;
-}
-
-header .inner .header__menu li:hover .sub__menu {
-    display: block;
-    background-color: white;
-    position: fixed;
-    top: 72px;
-    left: 0px;
-    width: 100%;
-    height: 500px;
 }

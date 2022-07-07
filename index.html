@@ -1,49 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <!-- CSS reset -->
+    <!-- reset css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-
-    <!-- css -->
-    <link rel="stylesheet" href="main.css">
-
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css">
     <!-- font awesome -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/4bb9fccf0f.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header>
         <div class="inner">
-            <div class="header__logo">
-                <a href="#"><img src="./images/elice_logo.png"></a>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="#"><img src="./images/elice_logo.webp" alt="elice"></a>
             </div>
-            <ul class="header__menu">
-                <li><a href="#">서비스<span class="material-symbols-outlined">expand_more</span></a>
-                    <ul class="sub__menu">
-                        <li><a href="#">미구현</a></li>
-                    </ul>
+            <!-- MAIN MENU -->
+            <ul class="main_menu">
+                <li class="menu">
+                    <div class="menu__name">서비스
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="menu__contents">
+                        <div class="menu__contents__name">
+                            <ul class="inner">
+                                <li>
+                                    <a class="title_text">교육</a>
+                                    <ul>
+                                        <img src="./images/graduation-cap-solid.svg">
+                                        <li class="bold_text">교육 콘텐츠
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        실무에 바로 적용할 수 있는 실습 중심 SW교육을 경험해보세요</li>
+                                        
+                                        <img src="./images/signal-solid.svg">
+                                        <li class="bold_text">데이터 분석
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        기초 프로그래밍부터 실제 데이터를 활용한 프로젝트 교육까지</li>
+                                        
+                                        <img src="./images/person-solid.svg">
+                                        <li class="bold_text">AI
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        KAIST 교육진과 공동설계한 최고의 AI 교육</li>
+                                        
+                                        <img src="./images/laptop-code-solid.svg">
+                                        <li class="bold_text">웹
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        내가 필요한 서비스를 손쉽게 기획하고 제작하는 웹 교육</li>
+                                        
+                                        <img src="./images/building-solid.svg">
+                                        <li class="bold_text">PBL
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        사내 데이터를 통해 현업의 문제를 해결하는 맞춤형 프로젝트 교육</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="title_text">LXP</a>
+                                    <ul>
+                                        <img src="./images/display-solid.svg">
+                                        <li class="bold_text">학습자 경험 플랫폼(LXP)
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        학습자의 교육 경험을 극대화할 올인원 플랫폼을 경험해보세요</li>
+                                        
+                                        <img src="./images/laptop-code-solid.svg">
+                                        <li class="bold_text">실습환경
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        복잡한 설치 없이 로그인 한 번으로 손쉽게 코딩하는 실습환경</li>
+                                        
+                                        <img src="./images/comment-dots-solid.svg">
+                                        <li class="bold_text">헬프센터
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        현직 전문가들과의 질의응답을 제공하는 엘리스만의 독보적인 솔루션</li>
+                                        
+                                        <img src="./images/list-check-solid.svg">
+                                        <li class="bold_text">학습관리
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        수강생들의 학습 데이터 기반 AI 학습관리 솔루션</li>
+                                        
+                                        <img src="./images/chart-line-solid.svg">
+                                        <li class="bold_text">AI 대시보드
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        수강생들의 학습 데이터에 기반한 AI 학습 관리 솔루션과 학습 독려</li>
+                                        
+                                        <img src="./images/video-solid.svg">
+                                        <li class="bold_text">화상강의실
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        비대면/대규모 코딩 교육을 위한 올인원 화상솔루션</li>
+                                        
+                                        <img src="./images/book-solid.svg">
+                                        <li class="bold_text">라이브러리
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        300+ 개의 다양한 교육자료 지원</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="title_text">코딩테스트</a>
+                                    <ul>
+                                        <img src="./images/laptop-code-solid.svg">
+                                        <li class="bold_text">온라인 코딩테스트
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        임직원 DX 역량을 공정하고 체계적으로 평가해보세요</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
-                <li><a href="#">엘리스<span class="material-symbols-outlined">expand_more</span></a>
-                    <ul class="sub__menu">
-                        <li><a href="#">미구현</a></li>
-                    </ul>
+                <li class="menu">
+                    <div class="menu__name">엘리스
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <div class="menu__contents">
+                        <div class="menu__contents__name">
+                            <ul class="inner">
+                                <li>
+                                    <a class="title_text">엘리스</a>
+                                    <ul>
+                                        <img src="./images/building-solid.svg">
+                                        <li class="bold_text">회사소개
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        엘리스 소개</li>
+                                        
+                                        <img src="./images/font-awesome-solid.svg">
+                                        <li class="bold_text">브랜드
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        기회와 가능성을 만들어내는 기술</li>
+                                        
+                                        <img src="./images/chalkboard-user-solid.svg">
+                                        <li class="bold_text">개인교육
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        엘리스의 다양한 교육</li>
+                                        
+                                        <img src="./images/people-group-solid.svg">
+                                        <li class="bold_text">앨리스 채용
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        <br>
+                                        디지털 트랜스포메이션을 이끄는 사람들, 엘리스</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
-                <li><a href="#">고객 사례</a></li>
-                <li><a href="#">뉴스룸</a></li>
+                <li class="menu">
+                    <div class="menu__name">고객 사례</div>
+                <li class="menu">
+                    <div class="menu__name">뉴스룸</div>
+                </li>
             </ul>
             <div class="header__btn">
-                <div class="header__btn__login">로그인</div>
-                <div class="header__btn__inquiry">도입문의</div>
+                <div class="btn__login">로그인</div>
+                <div class="btn__inquiry">도입문의</div>
             </div>
-        </div>
+        </div>    
     </header>
 </body>
-
 </html>
